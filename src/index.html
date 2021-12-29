@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+       <span class="heading">User Registration</span> 
+    </div>
+    <div class="container">
+        <div class="row">
+            
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-6">
+                <div class="ui background">
+                    <form class="form-group" action="./resources/connector.php" method="POST">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label>First Name</label>
+                                <input class="form-control" type="text" name="fname" placeholder="Enter your First Name"
+                                    required minlength="4" />
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="primary-text">Last Name</label>
+                                <input class="form-control" type="text" name="lname" placeholder="Enter your Last Name"
+                                    required minlength="4" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label>Email</label>
+                                <input class="form-control" type="email" name="email" placeholder="Enter your email"
+                                    required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label>Password</label>
+                                <input class="form-control" type="password" name="pwd" placeholder="Enter your password"
+                                    required minlength="4" />
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="primary-text">Confirm Password</label>
+                                <input class="form-control" type="password" name="conpwd" placeholder="Retype password"
+                                    required minlength="4" />
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label>Choose Gender</label>
+                                <select class="form-control" name="gender">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-6">
+                            <input type="submit" class="btn btn-primary submit" name="submit" value="Submit">
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-3">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
