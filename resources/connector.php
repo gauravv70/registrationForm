@@ -1,22 +1,19 @@
 <?php
 
-$fName = $_POST["fname"];
-$lName = $_POST["lname"];
-$email = $_POST["email"];
-$password = $_POST["pwd"];
-$confirmedPassword = $_POST["conpwd"];
-$gender = $_POST["gender"];
+$str_json = file_get_contents('php://input');
 
+$array = json_decode($str_json,true);
 
 $data = array(
     "0" => array(
-        "First Name" => $fName,
-        "Last Name" => $lName,
-        "Email" => $email,
-        "Password" => $password,
-        "Gender" => $gender,
+        "First Name" => $array["fName"],
+        "Last Name" => $array["lName"],
+        "Email" => $array["email"],
+        "Password" => $array["password"],
+        "Gender" => $array["gender"],
     )
 );
+
 $prevData = file_get_contents('data.json');
 $tempArray = json_decode($prevData);
 if ($tempArray) {
@@ -26,4 +23,5 @@ if ($tempArray) {
     $jsonData = json_encode($data);
 }
 file_put_contents('data.json', $jsonData);
-echo "<script>alert(Details Saved)</script>";
+?>
+

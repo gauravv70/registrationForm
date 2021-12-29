@@ -15,8 +15,14 @@ body {
   background-image: linear-gradient(to right, rgb(94, 8, 94, 0.5), rgb(94, 8, 94, 0.5));
 }
 
+.icon{
+  cursor: pointer;
+  color: wheat;
+  font-size: 20px;
+}
+
 .container{
-  margin-top: 100px;
+  margin-top: 40px;
 }
 
 .form-control{
@@ -37,13 +43,5 @@ body {
 }
 
 .submit {
-  background-color: green;
-  border: none;
   width: 100%;
-}
-
-.submit:hover,
-.submit:active {
-  background-color: rgb(2, 85, 2);
-  border: none;
 }
